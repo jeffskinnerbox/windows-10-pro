@@ -34,8 +34,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.provider :virtualbox do |v, override|
         v.gui = true
-        v.customize ["modifyvm", :id, "--memory", 4096]
-        v.customize ["modifyvm", :id, "--cpus", 2]
+        #v.customize ["modifyvm", :id, "--memory", 4096]
+        #v.customize ["modifyvm", :id, "--cpus", 2]
+        v.customize ["modifyvm", :id, "--memory", 8192]
+        v.customize ["modifyvm", :id, "--cpus", 4]
         v.customize ["modifyvm", :id, "--vram", 128]
         v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
         v.customize ["setextradata", "global", "GUI/SuppressMessages", "all"]
