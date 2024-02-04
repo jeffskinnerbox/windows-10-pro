@@ -11,10 +11,15 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.require_version ">= 1.6.2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-    config.vm.box = "baunegaard/win10pro-en"
-    config.vm.box_version = "1.4.0"
+    config.vm.box = "baunegaard/win11pro-en"
+    config.vm.box_version = "1.0.0"
     config.vm.communicator = "winrm"
-    config.vm.hostname = "windows-10-pro.vm"   # set hostname
+    config.vm.hostname = "windows-11-pro"   # set hostname
+
+    #config.vm.box = "baunegaard/win10pro-en"
+    #config.vm.box_version = "1.4.0"
+    #config.vm.communicator = "winrm"
+    #config.vm.hostname = "windows-10-pro"   # set hostname
 
     # admin user name and password
     config.winrm.username = "vagrant"
